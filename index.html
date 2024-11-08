@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autumn Fashion Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">Autumn Fashion</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776; 
+            </div>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="intro-content">
+        </div>
+    </section>
+
+    
+    <section class="blog-posts">
+        <div class="post">
+            <img src="https://www.shutterstock.com/image-photo/outdoor-autumn-portrait-young-elegant-600nw-1499415704.jpg" alt="Fashion Image 1">
+            <h2>How to Style Fall Outfits</h2>
+            <p>Cozy layers, rich textures, and neutral tones are all you need for the perfect fall outfit.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="post">
+            <img src="https://i.pinimg.com/564x/e6/65/72/e665723a51fef3eb881bf33889463ecc.jpg" alt="Fashion Image 2">
+            <h2>10 Must-Have Accessories for 2024</h2>
+            <p>From scarves to boots, elevate your look with these seasonal accessories.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="post">
+            <img src="https://thumbs.dreamstime.com/b/fall-fashion-pleated-skirt-trend-women-walking-autumn-park-stylish-outfit-adorable-ladies-enjoy-sunny-day-fashionable-clothes-170262510.jpg" alt="Fashion Image 3">
+            <h2>Summer to Fall Transition Outfits</h2>
+            <p>Seamlessly transition your wardrobe from the heat of summer to the crisp days of fall.</p>
+            <a href="#">Read More</a>
+        </div>
+    </section>
+
+    <script>
+        
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

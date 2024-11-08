@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #faf1e6;
+    color: #333;
+    padding-bottom: 50px; 
+}
+
+/* Header and Navbar */
+header {
+    background-color: #8d6748; 
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #f3d1b1; 
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.intro-section {
+    background-image: url('https://marketplace.canva.com/EAGOVLNln_k/1/0/1600w/canva-brown-aesthetic-vision-board-autumn-photo-collage-desktop-wallpaper-T3TgoGCk24Q.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    height: 280px;
+}
+
+.intro-section h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.intro-section p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.blog-posts .post {
+    background-color: #f9f5eb; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 500px;  /* Set fixed height for the post */
+    position: relative;  /* Position relative to allow absolute positioning of the "Read More" button */
+}
+
+.blog-posts .post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-posts .post img {
+    width: 100%;
+    height: 50%;  /* Keeps the image size proportional */
+    object-fit: cover;  /* Ensures the image covers the area without stretching */
+}
+
+.blog-posts .post h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    padding: 20px;
+    color: #8d6748;
+    margin: 0;
+}
+
+.blog-posts .post p {
+    padding: 0 20px 20px;
+    color: #666;
+    flex-grow: 1;
+}
+
+.blog-posts .post a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    padding: 12px 20px;
+    background-color: #8d6748;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0 0 10px 10px;  /* Rounded corners at the bottom */
+}
+
+.blog-posts .post a:hover {
+    background-color: #f3d1b1;
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        background-color: #8d6748; 
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    .hamburger:hover {
+        color: #f3d1b1;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+        width: 80%;
+    }
+    .blog-posts .post img {
+        width: 100%;
+        height: 45%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin-bottom: 15px;
+    }
+}
